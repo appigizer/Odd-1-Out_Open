@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IAPWaitingVC">
+            <connections>
+                <outlet property="activityIndicator" destination="dyS-Ec-n46" id="IfV-j6-MCR"/>
+                <outlet property="backgroundImageView" destination="jaY-yp-Gut" id="YhK-ap-Gbx"/>
+                <outlet property="cancelButton" destination="KRB-FW-rux" id="IvU-Bx-1TP"/>
+                <outlet property="msgLabel" destination="sAU-47-N9U" id="x2Y-b2-Qx2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6Y-QU-AXe">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eW4-cw-mHl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-yp-Gut">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-Ec-n46">
+                                <rect key="frame" x="281" y="282" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRB-FW-rux">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="E5P-Xd-Bas"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="gxI-o6-5TO"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTap:" destination="-1" eventType="touchUpInside" id="IOa-sR-Eej"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAU-47-N9U">
+                                <rect key="frame" x="275" y="339" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jaY-yp-Gut" firstAttribute="leading" secondItem="eW4-cw-mHl" secondAttribute="leading" id="8Ue-l2-O3f"/>
+                            <constraint firstAttribute="bottom" secondItem="jaY-yp-Gut" secondAttribute="bottom" id="EoP-Vl-BIu"/>
+                            <constraint firstItem="sAU-47-N9U" firstAttribute="centerX" secondItem="dyS-Ec-n46" secondAttribute="centerX" id="Vzi-qi-Mms"/>
+                            <constraint firstItem="dyS-Ec-n46" firstAttribute="centerY" secondItem="eW4-cw-mHl" secondAttribute="centerY" id="auc-VR-RU2"/>
+                            <constraint firstAttribute="bottom" secondItem="KRB-FW-rux" secondAttribute="bottom" id="fjI-ch-Udn"/>
+                            <constraint firstAttribute="trailing" secondItem="jaY-yp-Gut" secondAttribute="trailing" id="gtX-K9-EdI"/>
+                            <constraint firstItem="KRB-FW-rux" firstAttribute="leading" secondItem="eW4-cw-mHl" secondAttribute="leading" id="lFD-jm-sQZ"/>
+                            <constraint firstItem="sAU-47-N9U" firstAttribute="top" secondItem="dyS-Ec-n46" secondAttribute="bottom" constant="20" id="mUd-3A-soI"/>
+                            <constraint firstItem="jaY-yp-Gut" firstAttribute="top" secondItem="eW4-cw-mHl" secondAttribute="top" id="oa3-sP-DII"/>
+                            <constraint firstItem="dyS-Ec-n46" firstAttribute="centerX" secondItem="eW4-cw-mHl" secondAttribute="centerX" id="vBr-Cd-crE"/>
+                            <constraint firstAttribute="trailing" secondItem="KRB-FW-rux" secondAttribute="trailing" id="yky-aa-Caq"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="F6Y-QU-AXe" secondAttribute="bottom" id="Dbg-dT-MFf"/>
+                <constraint firstItem="F6Y-QU-AXe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GDk-AJ-Zaw"/>
+                <constraint firstItem="F6Y-QU-AXe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rMG-5h-Rng"/>
+                <constraint firstAttribute="trailing" secondItem="F6Y-QU-AXe" secondAttribute="trailing" id="yNC-Ej-jQZ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
